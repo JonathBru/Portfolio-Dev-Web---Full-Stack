@@ -1,0 +1,31 @@
+.main-footer {
+	background-color: $primary-color;
+	padding: 2em;
+	p {
+		color: white;
+		text-align: center;
+		margin-top: 1em;
+	}
+}
+
+.icones-container {
+	display: flex;
+	justify-content: center;
+}
+
+.svg-container {
+	margin-right: 5px;
+	margin-left: 5px;
+	border: 1px solid white;
+	padding: 6px;
+	border-radius: 50%;
+	width: 38px;
+	height: 38px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&:hover {
+		opacity: 0.7;
+	}
+}

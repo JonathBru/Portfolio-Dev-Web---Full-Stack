@@ -1,0 +1,87 @@
+.a-propos {
+    padding: 10em 0;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 0.8s;
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    h2 {
+        text-align: center;
+        color: $primary-color;
+    }   
+
+    p{
+        text-align: center;
+        color: $primary-color;
+        font-weight: bold;
+    }
+}
+
+.card-ability {
+    display: flex;
+    flex-direction: column;
+	background-color: $bg-soft-blue;
+	width: 30%;
+	box-shadow: 15px 20px 8px 0 rgba(88, 88, 183, 0.288);
+	border-radius: 15px;
+	text-align: center;
+    align-items: center;
+    padding-top: 2em;
+	height: 310px;
+}
+.logo-div {
+	width: 50px;
+	height: 50px;
+    padding-bottom: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.p-margin-bottom {
+	margin-bottom: 10px;
+} 
+
+
+.title-card-rond {
+	font-size: 1.1em;
+	color: $primary-color;
+	margin-bottom: 10px;
+	font-weight: 500;
+	color: $primary-color;
+
+}
+
+.ability {
+	background-color: $primary-color;
+	padding: 3em 2em;
+
+	h2 {
+		text-align: center;
+		color: $primary-color;
+		margin-bottom: 3em;
+	}
+    p {
+        font-weight: 600;
+        color: rgb(7, 19, 148);
+        text-shadow: 2px 2px 4px rgba(3, 3, 15, 0.5);
+    }
+}
+
+.ability-container {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	width: 90%;
+	max-width: 1200px;
+	margin: 8em auto 0 auto;
+	height:450px;
+}
+

@@ -1,0 +1,81 @@
+
+/* Styles pour la section de la carte */
+.portfolio {
+    text-align: center;
+}
+
+/* Styles pour la grille de cartes */
+#works-area {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes égales */
+    grid-gap: 30px; /* Espace entre les cartes */
+    justify-content: center; /* Centrer les cartes horizontalement */
+    padding: 0 10em;
+}
+
+/* Styles pour les cartes */
+.card {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    border: 1px solid #ddd;
+    box-shadow: 15px 20px 8px 0 rgba(88, 88, 183, 0.288);
+	border-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Agrandir légèrement la carte au survol */
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit:contain;
+    transition: opacity 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.card:hover img {
+    opacity: 0.7;
+    transform: scale(1.1);
+}
+
+.card-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 50, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.card:hover .card-title {
+    opacity: 1;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 5px;
+    width: 70%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}

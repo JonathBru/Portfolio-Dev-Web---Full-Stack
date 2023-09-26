@@ -1,0 +1,81 @@
+*, *:before, *:after{
+	box-sizing: border-box;
+      }
+      
+      html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, img, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, main, footer, header, nav, section, video{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+    }
+      
+      input{
+	border-radius: 0;
+      }
+      
+      img {
+	width: 100%;
+      }
+      
+      ul, ol {
+	list-style: none;
+      }
+
+    h1 {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 2.3em;
+    }
+    
+    h2 {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 2.3em;
+        margin-bottom: 0.6em;
+        font-weight: 600;
+    }
+    
+    h3 {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.6em;
+        font-weight: 500;
+        margin-bottom: 0.5em;
+    }
+    
+    p, li, label{
+        font-family: 'Open Sans', sans-serif;
+        color: rgb(46, 46, 46);
+    }
+
+    p {
+        font-size: 1.2em;
+    }
+    
+    .btn {
+        background-color: $primary-color;
+        color: white;
+        box-shadow: 0 5px 20px 0 #be97f19a;
+        padding: 0.5em 1.5em;
+        font-size: 18px;
+        border: none;
+        border-radius: 50px;
+        margin-top: 0.7em;
+        cursor: pointer;
+        display: block;
+        font-family: 'Open Sans', sans-serif;
+        text-decoration: none;
+        width: fit-content;
+    
+        &:hover {
+            background-color: darken($primary-color, $amount: 10);
+        }
+    }
+    
+    .link {
+            color: $dark-blue;
+            text-decoration: none;
+            font-weight: 500;
+    
+            &:hover {
+                color: darken($dark-blue, $amount: 15);
+            }
+        }

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <title>Portfolio Bru Jonathan</title>
+        <link rel="icon" type="image/png" sizes="19x19" href="images/avatar-bru-jonathan.webp">
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <link rel="stylesheet" href="styles.css" /> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        
+        <!--OG data-->
+        <meta property="og:site_name" content="Portfolio Bru Jonathan" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="" />
+        <meta property="og:title" content="Portfolio Bru Jonathan" />
+        <meta property="og:description" content="Portfolio développeur full stack"/>
+        <meta property="og:image" content= "" />
+  
+    </head>
+    
+    <body>
+        <!--NAVBAR-->
+        <nav>
+            <div class="pc-nav large-nav-menu">
+                <div class="logo-container"><img src="images/avatar-bru-jonathan.webp"></div>
+                <div>
+                    <ul class="nav-list">
+                        <li id="to-a-propos" class="nav-item">À propos</li>
+                        <li id="to-services" class="nav-item">Mes compétences</li>
+                        <li id="to-portfolio" class="nav-item">Mes travaux</li>
+                        <li id="to-contact" class="nav-item">Contact</li>
+                    </ul>
+                </div>
+            </div>
+            
+            
+            <div class="small-nav-menu display-none" id="full-screen">
+                <div class="logo-container"><img src="images/avatar-bru-jonathan.webp"></div>
+                <div id="burger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                
+                <div id="toggle-menu" class="small-menu-list display-none-menu">
+                    <ul> 
+                        <li id="responsive-to-a-propos">À propos</li>
+                        <li id="responsive-to-services">Mes compétences</li>
+                        <li id="responsive-to-portfolio">Mes travaux</li>             
+                        <li id="responsive-to-contact">Contact</li>
+                    </ul> 
+                </div>
+            </div>
+            
+            
+        </nav>
+
+         <!--BANNER-->
+        <div class="banner-container">
+            <div class="text-banner">
+                <h1>Bru Jonathan<br>
+                    Développeur WEB full-stack</h1>
+            </div>
+            <div class="portrait-banner"><img src="images/avatar-bru-jonathan.webp" alt="avatar Bru Jonathan"></div>
+        </div>
+
+    
+        <!--A propos-->
+        <div class="a-propos" id="a-propos">
+            <h2>À propos</h2>
+            <p>Après quelques années passées dans le milieu hospitalier, j'ai pris le choix de me reconvertir<br> 
+                vers un domaine en adéquation avec ma passion: l'informatique.
+                <br><br>
+                Étant féru de technologies, je souhaitais en apprendre plus sur le monde du développement Web.<br>
+                Je me suis donc inscrit à la formation de développeur fullstack prodiguée par OpenClassRooms<br>
+                afin de me former de manière optimale!
+                <br><br>
+                Ce fût un tournant décisif car plus qu'un hobby, j'y ai trouvé une véritable vocation.
+            </p>
+        </div>
+
+        <div class="ability">
+            <h2>Mes Compétences</h2>
+            <div class="ability-container">
+                <div class="card-ability">
+                    <div class="logo-div">
+                        <img src="images/logos/logo-front.png" alt="front-end">
+                    </div>
+                    <h3 class="title-card-ability">Front-end</h3>
+                    <p>HTML/CSS
+                       <br> 
+                       SCSS
+                       <br>
+                       Javascript/Jquery
+                       <br>
+                       React/Bootstrap
+                       <br>
+                       SEO/Optimisation</p>      
+                </div>
+
+        
+                <div class="card-ability">
+                    <div class="logo-div">
+                        <img src="images/logos/logo-back.png" alt="back-end">
+                    </div>
+                    <h3 class="title-card-ability">Back-end</h3>
+
+                    <p>Node.js
+                        <br>
+                        MongoDB
+                        <br>
+                        Express.js
+                        <br>
+                        Création et utilisation d'API</p>      
+                </div>
+
+                <div class="card-ability">
+                    <div class="logo-div">
+                        <img src="images/logos/logo-tool.png" alt="outils">
+                    </div>
+                    <h3 class="title-card-ability">Outils</h3>
+                    <p>Visual Studio
+                        <br>
+                        ChatGPT
+                        <br>
+                        npm
+                        <br>
+                        GItHub
+                        <br>
+                        Postman
+                        <br>
+                        Lighthouse</p>       
+                </div>
+            </div>
+        </div>
+
+        <div class="portfolio">
+
+            <h2>Portfolio (work in progress)</h2>
+         
+            <div id="works-area">
+
+                <!--Booki-->
+                <div class="card" id="booki" data-modal-target="booki1">
+                    <img src="images/card-portfolio/booki.webp" alt="Booki-1">
+                    <div class="card-title">Booki</div>
+                </div>
+
+                <!--Sophie Bluel-->
+                <div class="card" id="sophie-bluel" data-modal-target="sophie1">
+                    <img src="images/card-portfolio/sophie-bluel.webp" alt="sophie-1">
+                    <div class="card-title">Sophie bluel</div>
+                </div>
+                    
+                <!--Ninna-Carducci-->
+                <div class="card" id="nina-carducci" data-modal-target="carducci1">
+                    <img src="images/card-portfolio/Nina-Carducci.webp" alt="carducci-1">
+                    <div class="card-title">Nina Carducci</div>
+                </div>
+
+                <!--Kasa-->
+                <div class="card" id="kasa" data-modal-target="kasa1">
+                    <img src="images/card-portfolio/Kasa.webp" alt="kasa-1">
+                    <div class="card-title">Kasa</div>
+                </div>
+                    <!--Mon vieux Grimoire-->
+
+            </div>
+        </div>
+
+        <div id="modalContainer"></div>
+
+        <!--FORM CONTACT-->
+        	    
+
+        <section id="contact" class="form-contact">
+
+            
+            <h2>Contact</h2>
+        
+
+            <div class="form-section">
+            
+            
+                <form class="formulaire" action="#contact" method="post" id = "form" name="sendmail"
+                        onsubmit="return validate(event);">
+
+                    <div class="names-input">
+                        <div class="form-input form-lastname  formData">
+                            <label>Nom</label>
+                            <input class="text-control" type="text" id="lastname" name="lastname" placeholder="Nom">
+                        </div>
+                        <div class="form-input form-firstname formData">
+                            <label>Prénom</label>
+                            <input class="text-control" type="text" id="firstname" name="firstname" placeholder="Prénom">
+                        </div>
+                    </div>
+
+                    <div class="form-input formData">
+                        <label>Email</label>
+                        <input  class="text-control" type="text" id="email" name="email" placeholder="Email">
+                    </div>
+                    <div class="form-input formData">
+                        <label>Sujet</label>
+                        <input class="text-control" type="text" id="subject" name="subject" placeholder="Sujet">
+                    </div>
+                    <div class="form-input formData">
+                        <label>Votre message</label>
+                        <textarea class="message text-control" id="message" name="message" placeholder="Votre message"></textarea> 
+                    </div>
+
+                    <button id="submit-message-form"  name="sendmail" value="sendmail" class="submit-message" type="submit">Envoyer mon message</button>
+                </form>
+            </div>
+        </section>
+
+        <footer class="main-footer">
+        
+            <div class="icones-container">
+                <a class="svg-container" href="https://github.com/JonathBru" target="_blank"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 130.204 126.951">
+                        <path id="Icon_awesome-github" data-name="Icon awesome-github" d="M43.55,102.783c0,.525-.6.945-1.365.945-.866.079-1.47-.341-1.47-.945,0-.525.6-.945,1.365-.945C42.868,101.76,43.55,102.18,43.55,102.783ZM35.386,101.6c-.184.525.341,1.129,1.129,1.286a1.231,1.231,0,0,0,1.628-.525c.158-.525-.341-1.129-1.129-1.365A1.347,1.347,0,0,0,35.386,101.6Zm11.6-.446c-.761.184-1.286.683-1.208,1.286.079.525.761.866,1.549.683.761-.184,1.286-.683,1.208-1.208C48.459,101.418,47.75,101.077,46.989,101.156ZM64.262.563C27.852.563,0,28.2,0,64.615c0,29.112,18.323,54.024,44.5,62.792,3.36.6,4.541-1.47,4.541-3.176,0-1.628-.079-10.605-.079-16.118,0,0-18.376,3.938-22.234-7.823,0,0-2.993-7.639-7.3-9.608,0,0-6.011-4.121.42-4.043a13.857,13.857,0,0,1,10.133,6.773c5.749,10.133,15.383,7.219,19.137,5.486a14.59,14.59,0,0,1,4.2-8.847c-14.674-1.628-29.48-3.754-29.48-29.007,0-7.219,2-10.842,6.2-15.462-.683-1.706-2.914-8.742.683-17.824,5.486-1.706,18.113,7.088,18.113,7.088a62.015,62.015,0,0,1,32.971,0s12.627-8.82,18.113-7.088c3.6,9.109,1.365,16.118.683,17.824,4.2,4.646,6.773,8.269,6.773,15.462,0,25.332-15.462,27.353-30.136,29.007,2.415,2.074,4.463,6.011,4.463,12.18,0,8.847-.079,19.793-.079,21.946,0,1.706,1.208,3.78,4.541,3.176,26.251-8.715,44.049-33.627,44.049-62.74C130.2,28.2,100.672.563,64.262.563ZM25.516,91.1c-.341.263-.263.866.184,1.365.42.42,1.024.6,1.365.262.341-.262.263-.866-.184-1.365C26.461,90.944,25.857,90.761,25.516,91.1Zm-2.835-2.126c-.184.341.079.761.6,1.024a.781.781,0,0,0,1.129-.184c.184-.341-.079-.761-.6-1.024C23.285,88.634,22.865,88.713,22.681,88.975Zm8.505,9.345c-.42.341-.263,1.129.341,1.628.6.6,1.365.683,1.706.263.341-.341.184-1.129-.341-1.628C32.315,97.98,31.527,97.9,31.186,98.321Zm-2.993-3.859c-.42.263-.42.945,0,1.549s1.129.866,1.47.6a1.2,1.2,0,0,0,0-1.628C29.3,94.383,28.613,94.121,28.193,94.462Z" transform="translate(0 -0.563)" fill="#fff"/>
+                    </svg>
+                </a>
+                <a class="svg-container" href="" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 27.479 27.479">
+                        <path id="Icon_awesome-linkedin-in" data-name="Icon awesome-linkedin-in" d="M6.151,27.48H.454V9.133h5.7ZM3.3,6.631A3.315,3.315,0,1,1,6.6,3.3,3.327,3.327,0,0,1,3.3,6.631ZM27.473,27.48H21.789V18.549c0-2.128-.043-4.858-2.962-4.858-2.962,0-3.416,2.312-3.416,4.7V27.48H9.72V9.133h5.464v2.5h.08a5.986,5.986,0,0,1,5.39-2.963c5.766,0,6.826,3.8,6.826,8.728V27.48Z" transform="translate(0 0)" fill="#fff"/>
+                    </svg>
+                </a>            
+            </div>
+            <p>Jonathan Bru</p>
+        </footer>
+
+        <script src="animations/nav.js"></script>
+        <script src="animations/modal.js"></script>
+    </body>
+</html>
