@@ -174,8 +174,6 @@
         <div id="modalContainer"></div>
 
         <!--FORM CONTACT-->
-        	    
-
         <section id="contact" class="form-contact">
 
             
@@ -184,35 +182,31 @@
 
             <div class="form-section">
             
-            
-                <form class="formulaire" action="#contact" method="post" id = "form" name="sendmail"
-                        onsubmit="return validate(event);">
+                <form class="formulaire" action="https://formspree.io/f/xqkvgzra" method="POST" id = "form" name="sendmail">
 
-                    <div class="names-input">
-                        <div class="form-input form-lastname  formData">
-                            <label>Nom</label>
-                            <input class="text-control" type="text" id="lastname" name="lastname" placeholder="Nom">
-                        </div>
-                        <div class="form-input form-firstname formData">
-                            <label>Prénom</label>
-                            <input class="text-control" type="text" id="firstname" name="firstname" placeholder="Prénom">
-                        </div>
+                    <div class="form-input form-lastname  formData">
+                        <label>Nom</label>
+                        <input class="text-control" type="text" id="lastname" name="lastname" placeholder="Nom" required minlength="2" maxlength="30">
+                    </div>
+                    <div class="form-input form-firstname formData">
+                        <label>Prénom</label>
+                        <input class="text-control" type="text" id="firstname" name="firstname" placeholder="Prénom" required minlength="2" maxlength="30">
                     </div>
 
                     <div class="form-input formData">
                         <label>Email</label>
-                        <input  class="text-control" type="text" id="email" name="email" placeholder="Email">
+                        <input  class="text-control" type="email" id="email" name="email" placeholder="Email" required minlength="2" maxlength="30" title="Veuillez renseigner un mail valide.">
                     </div>
                     <div class="form-input formData">
                         <label>Sujet</label>
-                        <input class="text-control" type="text" id="subject" name="subject" placeholder="Sujet">
+                        <input class="text-control" type="text" id="subject" name="subject" placeholder="Sujet" required minlength="2" maxlength="30">
                     </div>
                     <div class="form-input formData">
                         <label>Votre message</label>
                         <textarea class="message text-control" id="message" name="message" placeholder="Votre message"></textarea> 
                     </div>
 
-                    <button id="submit-message-form"  name="sendmail" value="sendmail" class="submit-message" type="submit">Envoyer mon message</button>
+                    <button id="submit-message-form"  name="sendmail" value="sendmail" class="submit-message" type="submit">Envoyer</button>
                 </form>
             </div>
         </section>

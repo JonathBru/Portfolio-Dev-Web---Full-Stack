@@ -251,14 +251,6 @@ p {
   margin-bottom: 10px;
 }
 
-.title-card-rond {
-  font-size: 1.1em;
-  color: #030314;
-  margin-bottom: 10px;
-  font-weight: 500;
-  color: #030314;
-}
-
 .ability {
   background-color: #030314;
   padding: 3em 2em;
@@ -363,6 +355,120 @@ p {
   border-radius: 5px;
   width: 70%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.form-contact {
+  position: relative;
+  background-color: #030314;
+  padding: 3em 7em;
+  margin: 5em auto 0;
+  border: 20px solid transparent;
+  border-image: linear-gradient(to right, #1a1b5c 20%, #E2F3FA 80%);
+  border-image-slice: 1;
+  clip-path: polygon(0% 20%, 20% 0%, 80% 0%, 100% 20%, 100% 80%, 100% 100%, 0% 100%, 0% 100%); /* Créer la forme polygonale */
+}
+.form-contact h2 {
+  color: #E2F3FA;
+  text-align: center;
+}
+
+.form-contact::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  bottom: -10px;
+  left: -10px;
+  border: 10px solid transparent;
+  border-image: linear-gradient(to right, #1a1b5c 20%, #E2F3FA 80%);
+  border-image-slice: 1;
+  filter: blur(15px); /* Ajustez la valeur du flou selon vos préférences */
+  z-index: -1; /* Placez la pseudo-classe derrière le contenu */
+}
+
+.form-section {
+  display: flex;
+  justify-content: center;
+}
+
+.text-form {
+  width: 42%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+.text-form p {
+  font-size: 1.1em;
+}
+
+.formulaire {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-input {
+  display: flex;
+  flex-flow: column;
+  width: 20em;
+  margin-bottom: 0.8em;
+}
+
+label {
+  margin-bottom: 6px;
+  color: #030314;
+}
+
+input {
+  padding: 0.7em;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px 10px 0 rgba(89, 89, 241, 0.9490196078);
+}
+
+.message {
+  resize: none;
+  height: 150px;
+  border: none;
+  border-radius: 15px;
+  padding: 1em;
+  font-family: "Roboto", sans-serif;
+  box-shadow: 0 5px 20px 0 rgba(89, 89, 241, 0.9490196078);
+}
+
+@keyframes pulseButton {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 5px 20px 0 rgba(62, 117, 235, 0.6);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 5px 20px 0 rgba(62, 117, 235, 0.8);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 5px 20px 0 rgba(62, 117, 235, 0.6);
+  }
+}
+.submit-message {
+  width: 15em;
+  background-color: #030314;
+  color: white;
+  padding: 0.8em 1.1em;
+  font-size: 18px;
+  border: none;
+  border-radius: 30px;
+  margin-top: 0.7em;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  /* Animation pour l'effet de pulsation sur le bouton */
+  animation: pulseButton 2s linear infinite; /* Appliquer l'animation d'effet de pulsation au bouton */
+}
+.submit-message:hover {
+  background-color: black;
+  transform: scale(1.05);
+  box-shadow: 0 5px 20px 0 rgba(62, 117, 235, 0.8);
 }
 
 /*# sourceMappingURL=styles.css.map */

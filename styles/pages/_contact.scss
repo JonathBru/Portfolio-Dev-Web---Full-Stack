@@ -1,0 +1,121 @@
+
+
+.form-contact {
+    position: relative;
+    background-color: $primary-color;
+    padding: 3em 7em;
+    margin: 5em auto 0;
+    border: 20px solid transparent;
+    border-image: linear-gradient(to right, $dark-blue 20%, $light-blue 80%);
+    border-image-slice: 1;   
+    clip-path: polygon(0% 20%, 20% 0%, 80% 0%, 100% 20%, 100% 80%, 100% 100%, 0% 100%, 0% 100%); /* Créer la forme polygonale */
+
+    h2 {
+        color: $light-blue;
+        text-align: center;
+    }
+}
+
+.form-contact::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    bottom: -10px;
+    left: -10px;
+    border: 10px solid transparent;
+    border-image: linear-gradient(to right, $dark-blue 20%, $light-blue 80%);
+    border-image-slice: 1;
+    filter: blur(15px); /* Ajustez la valeur du flou selon vos préférences */
+    z-index: -1; /* Placez la pseudo-classe derrière le contenu */
+  }
+
+.form-section {
+	display: flex;
+	justify-content: center;
+}
+
+.text-form {
+	width: 42%;
+	display: flex;
+	flex-flow: column;
+	justify-content: space-between;
+	p {
+		font-size: 1.1em;
+	}
+
+}
+
+.formulaire {
+    display: flex;
+    flex-direction: column;
+	width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-input {
+	display: flex;
+	flex-flow: column;
+    width: 20em;
+	margin-bottom: 0.8em;
+}
+
+label {
+	margin-bottom: 6px;
+	color: $primary-color;
+}
+
+input {
+	padding: 0.7em;
+	border: none;
+	border-radius: 15px;
+	box-shadow: 0 5px 10px 0 #5959f1f2;
+}
+
+.message {
+	resize: none;
+	height: 150px;
+	border: none;
+	border-radius: 15px;
+	padding: 1em;
+	font-family:'Roboto', sans-serif;
+	box-shadow: 0 5px 20px 0 #5959f1f2;
+
+}
+
+@keyframes pulseButton {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 5px 20px 0 rgba(62, 117, 235, 0.6);
+    }
+    50% {
+      transform: scale(1.10);
+      box-shadow: 0 5px 20px 0 rgba(62, 117, 235, 0.8);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 5px 20px 0 rgba(62, 117, 235, 0.6);
+    }
+  }
+  
+  .submit-message {
+    width: 15em;
+    background-color: $primary-color;
+    color: white;
+    padding: 0.8em 1.1em;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    margin-top: 0.7em;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  
+    &:hover {
+      background-color: darken($primary-color, $amount: 15);
+      transform: scale(1.05);
+      box-shadow: 0 5px 20px 0 rgba(62, 117, 235, 0.8);
+    }
+  
+    /* Animation pour l'effet de pulsation sur le bouton */
+    animation: pulseButton 2s linear infinite; /* Appliquer l'animation d'effet de pulsation au bouton */
+  }
