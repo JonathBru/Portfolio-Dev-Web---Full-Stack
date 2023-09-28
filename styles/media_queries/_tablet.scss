@@ -168,12 +168,13 @@
     
     // Center & dribbble
     .dribbble {
+        visibility: hidden;
         position: fixed;
         display: block;
         right: 20px;
         bottom: 20px;
         img {
-            display: block;
+            display: none;
             height: 28px;
         }
     }

@@ -342,13 +342,14 @@ p {
     --rotateY: 0deg;
   }
   .dribbble {
+    visibility: hidden;
     position: fixed;
     display: block;
     right: 20px;
     bottom: 20px;
   }
   .dribbble img {
-    display: block;
+    display: none;
     height: 28px;
   }
 }
