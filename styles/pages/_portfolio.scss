@@ -20,6 +20,7 @@
 
 /* Styles pour les cartes */
 .card {
+    position: relative;
     max-width: 600px;
     height: 300px;
     border: 1px solid #ddd;
@@ -42,7 +43,6 @@
 
 .card:hover img {
     opacity: 0.7;
-    transform: scale(1.1);
 }
 
 .preview-title {
@@ -56,11 +56,13 @@
     color: $light-blue;
     padding: 10px;
     border-radius: 5px;
+    position: absolute;
+    top: 0; /* Position at the top of the card */
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
 }
 
-.card:hover .card-title {
+.card:hover .preview-title {
     opacity: 1;
 }
 
