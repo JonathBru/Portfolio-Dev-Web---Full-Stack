@@ -27,10 +27,10 @@
                 <div class="logo-container"><img src="images/avatar-bru-jonathan.webp"></div>
                 <div>
                     <ul class="nav-list">
-                        <li id="to-a-propos" class="nav-item">À propos</li>
-                        <li id="to-services" class="nav-item">Mes compétences</li>
-                        <li id="to-portfolio" class="nav-item">Mes travaux</li>
-                        <li id="to-contact" class="nav-item">Contact</li>
+                        <li><a href="#a-propos" id="to-a-propos" class="nav-item">À propos</a></li>
+                        <li><a href="#comps" id="to-compétences" class="nav-item">Mes compétences</a></li>
+                        <li><a href="#portfolio" id="to-portfolio" class="nav-item">Mes projets</a></li>
+                        <li><a href="#contact" id="to-contact" class="nav-item">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -38,19 +38,24 @@
             
             <div class="small-nav-menu display-none" id="full-screen">
                 <div class="logo-container"><img src="images/avatar-bru-jonathan.webp"></div>
-                <div id="burger-menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+                <label class="menu">
+                    <input type="checkbox" checked>
+                    <div id="menu-toggle">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </label>
+                
+                <!-- dribbble -->
+                <a class="dribbble" href="https://dribbble.com/shots/6350574-Hamburger-switch-animation" target="_blank">
+                    <img src="https://cdn.dribbble.com/assets/dribbble-ball-mark-2bd45f09c2fb58dbbfb44766d5d1d07c5a12972d602ef8b32204d28fa3dda554.svg" alt=""></a>
                 
                 <div id="toggle-menu" class="small-menu-list display-none-menu">
                     <ul> 
-                        <li id="responsive-to-a-propos">À propos</li>
-                        <li id="responsive-to-services">Mes compétences</li>
-                        <li id="responsive-to-portfolio">Mes travaux</li>             
-                        <li id="responsive-to-contact">Contact</li>
+                        <li><a href="#a-propos" id="responsive-to-a-propos">À propos</a></li>
+                        <li><a href="#comps" id="responsive-to-comps">Mes compétences</a></li>
+                        <li><a href="#portfolio" id="responsive-to-portfolio">Mes projets</a></li>             
+                        <li><a href="#contact" id="responsive-to-contact">Contact</a></li>
                     </ul> 
                 </div>
             </div>
@@ -82,7 +87,7 @@
             </p>
         </div>
 
-        <div class="ability">
+        <div class="ability" id="comps">
             <h2>Mes Compétences</h2>
             <div class="ability-container">
                 <div class="card-ability">
@@ -137,7 +142,7 @@
             </div>
         </div>
 
-        <div class="portfolio">
+        <div class="portfolio" id="portfolio">
 
             <h2>Portfolio (work in progress)</h2>
          
@@ -206,7 +211,7 @@
                         <textarea class="message text-control" id="message" name="message" placeholder="Votre message"></textarea> 
                     </div>
 
-                    <button id="submit-message-form"  name="sendmail" value="sendmail" class="submit-message" type="submit">Envoyer</button>
+                    <button id="submit-message-form" class="submit-message" type="submit">Envoyer</button>
                 </form>
             </div>
         </section>

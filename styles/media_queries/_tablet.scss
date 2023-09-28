@@ -1,0 +1,178 @@
+@media screen and (max-width:1024px) {
+    //NAVBAR
+	.large-nav-menu {
+		display: none;
+	}
+
+	.small-nav-menu {
+		height: 65px;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		z-index: 1;
+		position: fixed;
+		top: 0px;
+		width: 100%;
+		background-color: white;
+		box-shadow: #2222881a 2px 3px 3px 3px;
+	}
+
+    #toggle-menu  {
+		position: fixed;
+		top: 65px;
+		right: 0;
+		left: 0;
+		background-color: $primary-color;
+		z-index: 2;
+		padding: 3em 2em;
+		height: 50vh;
+		transition: height 1s linear;
+		
+		ul {
+			height: fit-content;
+			transition: height 0.400s linear;
+			padding-top: 2em;
+			position: relative;
+			opacity: 0;
+			animation: menuToggleClose 400ms forwards;
+			overflow: hidden;
+		}
+
+		li {
+			text-align: center;
+			color: $light-blue;
+			font-size: 2em;
+			margin-bottom: 1em;
+			font-weight: 500;
+			cursor: pointer;
+		}
+
+	}
+
+    @keyframes menuToggleClose{ 
+		0% { 
+			opacity: 0;
+			bottom: 0em; 
+		}
+	
+		100% { 
+			opacity: 1;
+			bottom: -2em
+			}
+	}
+
+	@keyframes menuToggleOpen{ 
+		0% { 
+			opacity: 1;
+			bottom: -5em;
+		}
+	
+		100% { 
+			opacity: 0;
+			bottom: 0em; }
+	}
+
+	.display-none-menu {
+		z-index: -1000;
+		padding: 0;
+		height: 0px; 
+		transition: height 0.3s  linear;
+		
+		ul {
+			transition: height 0.400s linear;
+			height: 0px;
+			opacity: 0;
+			animation: menuToggleOpen 300ms forwards;
+		
+		}
+	}
+    //bouton menu
+    .menu {
+        --front: #275EFE;
+        --back: #D93757;
+        --icon: white;
+        perspective: 600px;
+        width: 48px;
+        height: 48px;
+        position: relative;
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+        input {
+            display: none;
+            & + div {
+                span {
+                    --rotateY: 0deg;
+                    --background: var(--front);
+                    transform: rotateY(var(--rotateY));
+                    transform-style: preserve-3d;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                    background: var(--background);
+                    backface-visibility: hidden;
+                    transition: transform .6s cubic-bezier(.2, .64, .48, 1.24);
+                    &:before,
+                    &:after {
+                        --rotate: 0deg;
+                        content: '';
+                        position: absolute;
+                        width: 16px;
+                        height: 2px;
+                        border-radius: 1px;
+                        top: 50%;
+                        left: 50%;
+                        background: var(--icon);
+                        backface-visibility: hidden;
+                        transform: translate(-50%, -50%) rotate(var(--rotate)) translateZ(6px);
+                    }
+                    &:first-child {
+                        --background: var(--back);
+                        &:before {
+                            --rotate: -45deg;
+                        }
+                        &:after {
+                            --rotate: 45deg;
+                        }
+                    }
+                    &:last-child {
+                        --rotateY: 180deg;
+                        &:before {
+                            box-shadow: 0 -5px 0 var(--icon), 0 5px 0 var(--icon);
+                        }
+                        &:after {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            &:checked + div {
+                span {
+                    &:first-child {
+                        --rotateY: -180deg;
+                    }
+                    &:last-child {
+                        --rotateY: 0deg;
+                    }
+                }
+            }
+        }
+    }
+    
+    // Center & dribbble
+    .dribbble {
+        position: fixed;
+        display: block;
+        right: 20px;
+        bottom: 20px;
+        img {
+            display: block;
+            height: 28px;
+        }
+    }
+}
+
+
+
