@@ -27,7 +27,6 @@
 	border-radius: 15px;
     transition: transform 0.3s ease-in-out;
     cursor: pointer;
-    overflow: hidden;
 }
 
 .card:hover {
@@ -46,14 +45,11 @@
     transform: scale(1.1);
 }
 
-.card-title {
+.preview-title {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 2em;
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 50, 0.8);
@@ -197,5 +193,21 @@
     }
     100% {
         transform: scaleY(0.005) scaleX(0);
+    }
+}
+
+@media screen and (max-width:1024px) {
+	#works-area {
+        display: flex;
+		flex-direction: column;
+		gap: 20px;
+		align-items: center;
+        height: auto;
+        width: auto;
+	}
+
+    .card {
+        width: 200px;
+        height: 150px;
     }
 }

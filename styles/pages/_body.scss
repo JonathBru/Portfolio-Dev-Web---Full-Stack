@@ -79,3 +79,17 @@
 	height:450px;
 }
 
+@media screen and (max-width:1024px) {
+	.ability-container {
+        display: flex;
+		flex-flow: column;
+		gap: 10px;
+		align-items: center;
+        height: auto;
+        width: auto;
+	}
+
+    .card-ability {
+        width: 200px;
+    }
+}

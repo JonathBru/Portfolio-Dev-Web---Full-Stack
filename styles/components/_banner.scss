@@ -1,5 +1,9 @@
 // Nav-bar
-nav a {
+
+.nav-container {
+	width: 100%;
+}
+.nav-container a {
 	text-decoration: none;
 }
 
@@ -44,6 +48,9 @@ nav a {
 	}
 }
 
+.small-nav-menu {
+	display: none;
+}
 .logo-container {
 	width: 40px;
 	cursor: pointer;
@@ -103,4 +110,12 @@ nav a {
         transform: translateX(0);
         opacity: 1;
     }
+}
+
+@media screen and (max-width:1024px) {
+	.banner-container {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
 }

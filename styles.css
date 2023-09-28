@@ -1,6 +1,8 @@
 @charset "UTF-8";
 *, *:before, *:after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, img, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, main, footer, header, nav, section, video {
@@ -79,7 +81,11 @@ p {
   color: #090920;
 }
 
-nav a {
+.nav-container {
+  width: 100%;
+}
+
+.nav-container a {
   text-decoration: none;
 }
 
@@ -120,6 +126,10 @@ nav a {
 }
 .nav-item:hover {
   color: #1a1b5c;
+}
+
+.small-nav-menu {
+  display: none;
 }
 
 .logo-container {
@@ -179,8 +189,19 @@ nav a {
   }
 }
 @media screen and (max-width: 1024px) {
-  .large-nav-menu {
+  .banner-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .pc-nav {
     display: none;
+  }
+  .small-nav-menu,
+  .small-nav-menu * {
+    box-sizing: border-box;
   }
   .small-nav-menu {
     height: 65px;
@@ -441,6 +462,19 @@ nav a {
   height: 450px;
 }
 
+@media screen and (max-width: 1024px) {
+  .ability-container {
+    display: flex;
+    flex-flow: column;
+    gap: 10px;
+    align-items: center;
+    height: auto;
+    width: auto;
+  }
+  .card-ability {
+    width: 200px;
+  }
+}
 .portfolio {
   text-align: center;
   display: flex;
@@ -467,7 +501,6 @@ nav a {
   border-radius: 15px;
   transition: transform 0.3s ease-in-out;
   cursor: pointer;
-  overflow: hidden;
 }
 
 .card:hover {
@@ -486,14 +519,11 @@ nav a {
   transform: scale(1.1);
 }
 
-.card-title {
+.preview-title {
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 2em;
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 50, 0.8);
@@ -633,6 +663,20 @@ nav a {
   }
   100% {
     transform: scaleY(0.005) scaleX(0);
+  }
+}
+@media screen and (max-width: 1024px) {
+  #works-area {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    height: auto;
+    width: auto;
+  }
+  .card {
+    width: 200px;
+    height: 150px;
   }
 }
 .form-contact {

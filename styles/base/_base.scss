@@ -1,6 +1,8 @@
 *, *:before, *:after{
 	box-sizing: border-box;
-      }
+    margin: 0;
+    padding: 0;      
+}
       
       html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, img, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, main, footer, header, nav, section, video{
 	margin: 0;

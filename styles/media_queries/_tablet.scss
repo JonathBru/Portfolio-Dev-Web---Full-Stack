@@ -1,8 +1,13 @@
 @media screen and (max-width:1024px) {
     //NAVBAR
-	.large-nav-menu {
+	.pc-nav {
 		display: none;
 	}
+
+    .small-nav-menu,
+.small-nav-menu * {
+    box-sizing: border-box;
+}
 
 	.small-nav-menu {
 		height: 65px;
