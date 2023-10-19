@@ -3,7 +3,7 @@
 .form-contact {
     position: relative;
     background-color: $primary-color;
-    padding: 3em 7em;
+    padding: 3em 0;
     margin: 5em auto 0;
     border: 20px solid transparent;
     border-image: linear-gradient(to right, $dark-blue 20%, $light-blue 80%);
@@ -35,21 +35,9 @@
 	justify-content: center;
 }
 
-.text-form {
-	width: 42%;
-	display: flex;
-	flex-flow: column;
-	justify-content: space-between;
-	p {
-		font-size: 1.1em;
-	}
-
-}
-
 .formulaire {
     display: flex;
     flex-direction: column;
-	width: 50%;
     justify-content: center;
     align-items: center;
 }
@@ -57,7 +45,7 @@
 .form-input {
 	display: flex;
 	flex-flow: column;
-    width: 20em;
+  width: 20em;
 	margin-bottom: 0.8em;
 }
 
@@ -119,3 +107,16 @@ input {
     /* Animation pour l'effet de pulsation sur le bouton */
     animation: pulseButton 2s linear infinite; /* Appliquer l'animation d'effet de pulsation au bouton */
   }
+
+@media screen and (max-width: 415px) {
+
+  .form-input {
+    width: 13em;
+  }
+
+  .submit-message {
+    width: 10em;
+  }
+}
+  
+
