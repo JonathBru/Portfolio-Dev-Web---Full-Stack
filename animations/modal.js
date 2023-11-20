@@ -70,9 +70,31 @@ function closeModal(modalId) {
     isModalOpen = false;
 }
 
+function resetModalState() {
+    const allModals = document.querySelectorAll('.modal');
+    allModals.forEach(function (modal) {
+        // Réinitialisez la classe 'full-size' de toutes les images de la modale
+        modal.querySelectorAll('.modal-images img.full-size').forEach(function (img) {
+            img.classList.remove('full-size');
+        });
+
+        // Réinitialisez les styles des autres images
+        modal.querySelectorAll('.modal-images img:not(.full-size)').forEach(function (img) {
+            img.style.display = 'block';
+        });
+
+        modal.querySelectorAll('.modal-text').forEach(function (text) {
+            text.style.display = 'flex';
+        })
+    });
+}
+
 const cards = document.querySelectorAll(".card");
 cards.forEach((card) => {
     card.addEventListener("click", function () {
+
+        resetModalState();
+
         const modalId = this.getAttribute("data-modal-target");
         openModal(modalId);
     });
