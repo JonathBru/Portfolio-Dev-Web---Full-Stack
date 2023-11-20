@@ -97,23 +97,29 @@ p {
   position: fixed;
   width: 100%;
   z-index: 1000;
-  background-color: white;
-  box-shadow: rgba(34, 34, 136, 0.1019607843) 2px 3px 3px 3px;
+  background: transparent;
   height: 65px;
   max-height: 65px;
 }
 
-.nav-active {
+.nav-active-1 {
   background-color: #030314;
 }
-.nav-active .nav-item {
+.nav-active-1 .nav-item {
   color: white;
 }
-.nav-active .nav-item:hover {
+.nav-active-1 .nav-item:hover {
   color: #030314;
 }
-.nav-active .nav-list li a:after {
+.nav-active-1 .nav-list li a:after {
   background: rgba(217, 243, 250, 0.964);
+}
+
+.nav-active-2 {
+  background-color: white;
+}
+.nav-active-2 .nav-item {
+  color: #030314;
 }
 
 .nav-list {
@@ -156,8 +162,9 @@ p {
 }
 
 .nav-item {
+  opacity: 0;
   font-size: 1em;
-  color: #030314;
+  color: rgba(217, 243, 250, 0.964);
   font-weight: 500;
   cursor: pointer;
   display: block;
@@ -165,9 +172,22 @@ p {
   text-decoration: none;
   text-transform: uppercase;
   margin: 0 10px;
+  animation: slideIn 1s ease-in-out forwards;
 }
 .nav-item:hover {
   color: #E2F3FA;
+}
+
+.delay-1 {
+  animation-delay: 0.1s;
+}
+
+.delay-2 {
+  animation-delay: 0.3s;
+}
+
+.delay-3 {
+  animation-delay: 0.6s;
 }
 
 .small-nav-menu {
@@ -189,14 +209,16 @@ p {
   gap: 40px;
   padding: 140px;
   width: 100%;
-  background-color: #030314;
+  background: linear-gradient(to right, #030314, #1a1b5c);
 }
 .banner-container .portrait-banner {
+  opacity: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 40%;
   animation: slideLeft 1s ease-in-out forwards;
+  animation-delay: 1s;
 }
 .banner-container .portrait-banner img {
   width: 100%;
@@ -204,16 +226,27 @@ p {
   min-width: 10em;
   max-width: 20em;
   max-height: 20em;
-  animation: morph 3.5s linear infinite;
+  animation: morph 3s linear infinite;
 }
 .banner-container .text-banner {
+  opacity: 0;
   display: flex;
   text-align: center;
   align-items: center;
   color: #E2F3FA;
   animation: slideRight 1s ease-in-out forwards;
+  animation-delay: 1s;
 }
 
+@keyframes slideIn {
+  from {
+    transform: translateX(300%);
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 @keyframes slideRight {
   0% {
     transform: translateX(-100%);
@@ -443,7 +476,7 @@ p {
   padding: 10em 0;
   opacity: 0;
   animation: fadeIn 1s ease-in-out forwards;
-  animation-delay: 0.8s;
+  animation-delay: 1.8s;
 }
 @keyframes fadeIn {
   from {
@@ -490,10 +523,10 @@ p {
 }
 
 .ability {
-  background-color: #030314;
+  background: linear-gradient(to bottom, #030314, #1a1b5c);
   padding: 3em 2em;
   border-bottom: 20px solid transparent;
-  border-image: linear-gradient(to right, #1a1b5c 20%, #E2F3FA 80%);
+  border-image: linear-gradient(to right, #030314 10%, #1a1b5c 90%);
   border-image-slice: 1;
   clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 100% 0%, 100% 80%, 80% 100%, 20% 100%, 0% 80%); /* Créer la forme polygonale */
 }
@@ -785,11 +818,11 @@ p {
 }
 .form-contact {
   position: relative;
-  background-color: #030314;
+  background: linear-gradient(to top, #030314, #1a1b5c);
   padding: 3em 0;
   margin: 5em auto 0;
   border: 20px solid transparent;
-  border-image: linear-gradient(to right, #1a1b5c 20%, #E2F3FA 80%);
+  border-image: linear-gradient(to right, #030314 10%, #1a1b5c 90%);
   border-image-slice: 1;
   clip-path: polygon(0% 20%, 20% 0%, 80% 0%, 100% 20%, 100% 80%, 100% 100%, 0% 100%, 0% 100%); /* Créer la forme polygonale */
 }
@@ -828,7 +861,7 @@ p {
   display: flex;
   flex-flow: column;
   width: 20em;
-  margin-bottom: 0.8em;
+  margin-bottom: 2em;
 }
 
 label {

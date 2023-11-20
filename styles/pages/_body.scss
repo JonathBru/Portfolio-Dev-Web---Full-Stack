@@ -2,7 +2,7 @@
     padding: 10em 0;
     opacity: 0;
     animation: fadeIn 1s ease-in-out forwards;
-    animation-delay: 0.8s;
+    animation-delay: 1.8s;
 
     @keyframes fadeIn {
         from {
@@ -50,10 +50,10 @@
 } 
 
 .ability {
-	background-color: $primary-color;
+	background: linear-gradient(to bottom, $primary-color , $dark-blue);
 	padding: 3em 2em;
     border-bottom: 20px solid transparent;
-    border-image: linear-gradient(to right, $dark-blue 20%, $light-blue 80%);
+    border-image: linear-gradient(to right, $primary-color 10%, $dark-blue 90%);
     border-image-slice: 1;   
     clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 100% 00%, 100% 80%, 80% 100%, 20% 100%, 0% 80%); /* Créer la forme polygonale */
 

@@ -3,15 +3,19 @@ const navbar = document.getElementsByClassName("pc-nav")[0];
 
 window.onscroll = () => {
 	const scrollY = window.scrollY;
-
 	if (scrollY > 1800) {
-		navbar.classList.add('nav-active');
+		navbar.classList.remove('nav-active-2');
+		navbar.classList.add('nav-active-1');
 	} else if (scrollY > 1100) {
-	  navbar.classList.remove('nav-active');
+		navbar.classList.remove('nav-active-1');
+		navbar.classList.add('nav-active-2');
 	} else if (scrollY > 500) {
-	  navbar.classList.add('nav-active');
+		navbar.classList.add('nav-active-1');
+		navbar.classList.remove('nav-active-2');
+	} else if (scrollY > 1) {
+		navbar.classList.add('nav-active-2');
 	} else {
-	  navbar.classList.remove('nav-active');
+		navbar.classList.remove('nav-active-1', 'nav-active-2');
 	}
 };
 
