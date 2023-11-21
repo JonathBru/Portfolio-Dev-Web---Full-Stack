@@ -501,7 +501,7 @@ p {
   flex-direction: column;
   background-color: rgba(217, 243, 250, 0.964);
   width: 30%;
-  box-shadow: 15px 20px 8px 0 rgba(88, 88, 183, 0.288);
+  box-shadow: rgb(0, 1, 6) 0px 20px 30px -10px;
   border-radius: 15px;
   text-align: center;
   align-items: center;
@@ -587,7 +587,7 @@ p {
   max-width: 600px;
   height: 300px;
   border: 1px solid #ddd;
-  box-shadow: 15px 20px 8px 0 rgba(88, 88, 183, 0.288);
+  box-shadow: #1a1b5c 0px 20px 30px -10px;
   border-radius: 15px;
   transition: transform 0.3s ease-in-out;
   cursor: pointer;

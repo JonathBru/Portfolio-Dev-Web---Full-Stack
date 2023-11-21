@@ -24,7 +24,7 @@
     max-width: 600px;
     height: 300px;
     border: 1px solid #ddd;
-    box-shadow: 15px 20px 8px 0 rgba(88, 88, 183, 0.288);
+    box-shadow: $dark-blue 0px 20px 30px -10px;
 	border-radius: 15px;
     transition: transform 0.3s ease-in-out;
     cursor: pointer;
