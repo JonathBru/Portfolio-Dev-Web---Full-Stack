@@ -5,6 +5,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, img, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, main, footer, header, nav, section, video {
   margin: 0;
   padding: 0;
@@ -51,34 +55,6 @@ p, li, label {
 
 p {
   font-size: 1.2em;
-}
-
-.btn {
-  background-color: #030314;
-  color: white;
-  box-shadow: 0 5px 20px 0 rgba(151, 204, 241, 0.7411764706);
-  padding: 0.5em 1.5em;
-  font-size: 18px;
-  border: none;
-  border-radius: 50px;
-  margin-top: 0.7em;
-  cursor: pointer;
-  display: block;
-  font-family: "Open Sans", sans-serif;
-  text-decoration: none;
-  width: fit-content;
-}
-.btn:hover {
-  background-color: black;
-}
-
-.link {
-  color: #1a1b5c;
-  text-decoration: none;
-  font-weight: 500;
-}
-.link:hover {
-  color: #090920;
 }
 
 .nav-container {
@@ -472,6 +448,10 @@ p {
   opacity: 0.7;
 }
 
+.shadow {
+  filter: drop-shadow(1px 3px 3px rgba(214, 250, 255, 0.7));
+}
+
 .a-propos {
   padding: 10em 0;
   opacity: 0;
@@ -499,9 +479,9 @@ p {
 .card-ability {
   display: flex;
   flex-direction: column;
-  background-color: rgba(217, 243, 250, 0.964);
+  background: linear-gradient(to top, #030314, #1a1b5c);
   width: 30%;
-  box-shadow: rgb(0, 1, 6) 0px 20px 30px -10px;
+  box-shadow: inset #1a1b5c 0px 20px 30px -10px;
   border-radius: 15px;
   text-align: center;
   align-items: center;
@@ -523,12 +503,17 @@ p {
 }
 
 .ability {
-  background: linear-gradient(to bottom, #030314, #1a1b5c);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.742), rgba(0, 0, 0, 0.595)), url("../../images/card-portfolio/_a42d145d-698f-4002-8d18-b4aa343f1f8f.jpg");
+  min-height: 500px;
   padding: 3em 2em;
   border-bottom: 20px solid transparent;
   border-image: linear-gradient(to right, #030314 10%, #1a1b5c 90%);
   border-image-slice: 1;
   clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 100% 0%, 100% 80%, 80% 100%, 20% 100%, 0% 80%); /* Créer la forme polygonale */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .ability h2 {
   text-align: center;
@@ -537,8 +522,12 @@ p {
 }
 .ability p {
   font-weight: 600;
-  color: rgb(7, 19, 148);
+  color: #E2F3FA;
   text-shadow: 2px 2px 4px rgba(3, 3, 15, 0.5);
+}
+.ability h3 {
+  color: #E2F3FA;
+  font-weight: 800;
 }
 
 .ability-container {

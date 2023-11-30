@@ -3,6 +3,10 @@
     margin: 0;
     padding: 0;      
 }
+
+html {
+    scroll-behavior: smooth;
+}
       
       html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, img, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, main, footer, header, nav, section, video{
 	margin: 0;
@@ -51,33 +55,3 @@
     p {
         font-size: 1.2em;
     }
-    
-    .btn {
-        background-color: $primary-color;
-        color: white;
-        box-shadow: 0 5px 20px 0 #97ccf1bd;
-        padding: 0.5em 1.5em;
-        font-size: 18px;
-        border: none;
-        border-radius: 50px;
-        margin-top: 0.7em;
-        cursor: pointer;
-        display: block;
-        font-family: 'Open Sans', sans-serif;
-        text-decoration: none;
-        width: fit-content;
-    
-        &:hover {
-            background-color: darken($primary-color, $amount: 10);
-        }
-    }
-    
-    .link {
-            color: $dark-blue;
-            text-decoration: none;
-            font-weight: 500;
-    
-            &:hover {
-                color: darken($dark-blue, $amount: 15);
-            }
-        }

@@ -27,9 +27,9 @@
 .card-ability {
     display: flex;
     flex-direction: column;
-	background-color: $bg-soft-blue;
+	background: linear-gradient(to top, $primary-color , $dark-blue);
 	width: 30%;
-	box-shadow: rgb(0, 1, 6) 0px 20px 30px -10px;
+	box-shadow: inset $dark-blue 0px 20px 30px -10px;
 	border-radius: 15px;
 	text-align: center;
     align-items: center;
@@ -50,12 +50,17 @@
 } 
 
 .ability {
-	background: linear-gradient(to bottom, $primary-color , $dark-blue);
+	background-image: linear-gradient(rgba(0, 0, 0, 0.742),rgba(0, 0, 0, 0.595)) , url("../../images/card-portfolio/_a42d145d-698f-4002-8d18-b4aa343f1f8f.jpg");
+    min-height: 500px;
 	padding: 3em 2em;
     border-bottom: 20px solid transparent;
     border-image: linear-gradient(to right, $primary-color 10%, $dark-blue 90%);
     border-image-slice: 1;   
     clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 100% 00%, 100% 80%, 80% 100%, 20% 100%, 0% 80%); /* Créer la forme polygonale */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
 	h2 {
 		text-align: center;
@@ -64,8 +69,13 @@
 	}
     p {
         font-weight: 600;
-        color: rgb(7, 19, 148);
+        color: $light-blue;
         text-shadow: 2px 2px 4px rgba(3, 3, 15, 0.5);
+    }
+
+    h3 {
+        color: $light-blue;
+        font-weight: 800;
     }
 }
 
