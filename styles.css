@@ -503,7 +503,7 @@ p {
 }
 
 .ability {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.742), rgba(0, 0, 0, 0.595)), url("../../images/card-portfolio/computer.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.742), rgba(0, 0, 0, 0.595)), url("../../images/card-portfolio/computer.webp");
   min-height: 500px;
   padding: 3em 2em;
   border-bottom: 20px solid transparent;
